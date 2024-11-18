@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIAC Abroad</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url(bg.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+        }
+
+        /*body::after {*/
+        /*    position: absolute;*/
+        /*    content: '';*/
+        /*    left: 0;*/
+        /*    top: 0;*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    background-color: #00000070;*/
+        /*    z-index: -1;*/
+        /*}*/
+
+        h2 {
+            font-size: 50px;
+            background: #0000007d;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .text-animation {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            position: absolute;
+            font-size: 50px;
+            color: #333;
+            color: white;
+            opacity: 0;
+            animation: animate 5s infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(1);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .text:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .text:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .text:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+
+        /* Normal desktop :1200px. */
+        @media (min-width: 1200px) and (max-width: 1500px) {}
+
+
+        /* Normal desktop :992px. */
+        @media (min-width: 992px) and (max-width: 1200px) {}
+
+
+        /* Tablet desktop :768px. */
+        @media (min-width: 768px) and (max-width: 991px) {}
+
+
+        /* small mobile :320px. */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 50px;
+            }
+
+            .text {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        /* Large Mobile :480px. */
+        @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+        .gradient-text {
+            background: linear-gradient(to right, #ff69b4, #ffa07a, #ffd700, #ffff00, #00ff00, #0000ff, #8f0a1a);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="gradient-text">Coming Soon</h1>
+    </div>
+</body>
+
+</html>
